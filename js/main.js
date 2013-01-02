@@ -28,10 +28,15 @@ var app = {
             });
         } else {
             // ... if not: register mouse events instead
-            $('body').on('mousedown', 'a', function(event) {
+            var body = $('body');
+            var e = $('#eLdist');
+            $(".header").mousedown(function(event) {
+                alert("FUC");
                 $(event.target).addClass('tappable-active');
             });
-            $('body').on('mouseup', 'a', function(event) {
+            
+            $('a').on('mouseup', function(event) {
+                alert("you");
                 $(event.target).removeClass('tappable-active');
             });
         }
